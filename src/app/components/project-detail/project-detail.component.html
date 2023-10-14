@@ -1,0 +1,219 @@
+<div class="col-lg-12">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="callout callout-info">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-sm-6">
+							<dl>
+								<dt><b class="border-bottom border-primary">{{project.name}}</b></dt>
+								<dd>{{project.description}}</dd>
+						
+							</dl>
+						</div>
+						<div class="col-md-6">
+							<dl>
+								<dt><b class="border-bottom border-primary">Start Date</b></dt>
+								<dd>{{project.start_date | date:"dd/MM/YYYY"}}</dd>
+							</dl>
+							<dl>
+								<dt><b class="border-bottom border-primary">End Date</b></dt>
+								<dd>{{project.end_date | date:"dd/MM/YYYY"}}</dd>
+							</dl>
+							<dl>
+								<dt><b class="border-bottom border-primary">Status</b></dt>
+								<dd>
+							
+									<span class='badge badge-secondary'>Done</span>
+									
+								</dd>
+							</dl>
+							<dl>
+								<dt><b class="border-bottom border-primary">Project Manager</b></dt>
+								<dd>
+
+									<div class="d-flex align-items-center mt-1">
+										<img
+											class="img-circle img-thumbnail p-0 shadow-sm border-info img-sm mr-3"
+											src="../../../../assets/uploads/1605918720_avatar2.png" alt="Avatar">
+										<b>{{project.manager_id}}</b>
+									</div>
+
+									<small><i>Some thing wrong!!!</i></small>
+
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<!-- <app-team-member1></app-team-member1> -->
+			<div class="card card-outline card-primary">
+				<div class="card-header">
+					<span><b>Team Member/s:</b></span>
+					<div class="card-tools">
+						<button class="btn btn-primary bg-gradient-primary btn-sm" type="button"
+							id="manage_team">Manage</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<ul class="users-list clearfix">
+						<li>
+							<img src="../../../../assets/uploads/1606958760_avatar.jpg"
+								alt="User Image">
+							<a class="users-list-name" href="#"></a>
+							<span class="users-list-date">Today</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="card card-outline card-primary">
+				<div class="card-header">
+					<span><b>Task List:</b></span>
+
+					<div class="card-tools">
+						<button class="btn btn-primary bg-gradient-primary btn-sm" type="button"
+							id="new_task"><i class="fa fa-plus"></i> New Task</button>
+					</div>
+
+				</div>
+				<div class="card-body p-0">
+					<div class="table-responsive">
+						<table class="table table-condensed m-0 table-hover">
+							<colgroup>
+								<col width="5%">
+								<col width="25%">
+								<col width="30%">
+								<col width="15%">
+								<col width="15%">
+							</colgroup>
+							<thead>
+								<th>#</th>
+								<th>Task</th>
+								<th>Description</th>
+								<th>Status</th>
+								<th>Action</th>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td class="text-center"></td>
+									<td class><b></b></td>
+									<td class><p class="truncate"></p></td>
+									<td>
+									
+										<span class='badge badge-secondary'>Pending</span>
+						
+									</td>
+									<td class="text-center">
+										<button type="button"
+											class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle"
+											data-toggle="dropdown" aria-expanded="true">
+											Action
+										</button>
+										<div class="dropdown-menu" style>
+											<a class="dropdown-item view_task" href="javascript:void(0)"
+												data-id=""
+												data-task="">View</a>
+											<div class="dropdown-divider"></div>
+
+											<a class="dropdown-item edit_task" href="javascript:void(0)"
+												data-id=""
+												data-task="">Edit</a>
+											<div class="dropdown-divider"></div>
+											<a class="dropdown-item delete_task" href="javascript:void(0)"
+												data-id="">Delete</a>
+
+										</div>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<b>Members Progress/Activity</b>
+					<div class="card-tools">
+						<button class="btn btn-primary bg-gradient-primary btn-sm" type="button"
+							id="new_productivity"><i class="fa fa-plus"></i> New Productivity</button>
+					</div>
+				</div>
+				<div class="card-body">
+
+					<div class="post">
+
+						<div class="user-block">
+
+							<span class="btn-group dropleft float-right">
+								<span class="btndropdown-toggle" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">
+									<i class="fa fa-ellipsis-v"></i>
+								</span>
+								<div class="dropdown-menu">
+									<a class="dropdown-item manage_progress" href="javascript:void(0)"
+										data-id=""
+										data-task="">Edit</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item delete_progress" href="javascript:void(0)"
+										data-id="">Delete</a>
+								</div>
+							</span>
+
+							<img class="img-circle img-bordered-sm"
+								src="" alt="user image">
+							<span class="username">
+								<a href="#">Task</a>
+							</span>
+							<span class="description">
+								<span class="fa fa-calendar-day"></span>
+								<span><b>Date</b></span>
+								<span class="fa fa-user-clock"></span>
+								<span>Start: <b>Date Start</b></span>
+								<span> | </span>
+								<span>End: <b>Date Time</b></span>
+							</span>
+
+						</div>
+						<!-- /.user-block -->
+						<div>
+
+						</div>
+
+						<p>
+							<!-- <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a> -->
+						</p>
+					</div>
+					<div class="post clearfix"></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	.users-list>li img {
+	    border-radius: 50%;
+	    height: 67px;
+	    width: 67px;
+	    object-fit: cover;
+	}
+	.users-list>li {
+		width: 33.33% !important
+	}
+	.truncate {
+		-webkit-line-clamp:1 !important;
+	}
+</style>

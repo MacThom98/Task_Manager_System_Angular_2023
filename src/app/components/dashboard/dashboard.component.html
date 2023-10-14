@@ -1,0 +1,48 @@
+
+<!-- Info boxes -->
+ <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+
+            </div>
+          </div>
+  </div>
+  <hr>
+  
+        
+      <div class="row">
+        <div class="col-md-8">
+        <div class="card card-outline card-success">
+          <div class="card-header">
+            <b>Project Progress</b>
+          </div>
+         <app-project-progress [projects]='projects'></app-project-progress>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+          <div class="col-12 col-sm-6 col-md-12">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3>{{projects.length}}</h3>
+                <p>Total Projects</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-layer-group"></i>
+              </div>
+            </div>
+          </div>
+           <div class="col-12 col-sm-6 col-md-12">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3></h3>
+                <p>Total Tasks</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-tasks"></i>
+              </div>
+            </div>
+          </div>
+      </div>
+        </div>
+      </div>

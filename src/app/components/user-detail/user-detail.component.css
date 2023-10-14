@@ -1,0 +1,14 @@
+/* .widget-user-image{
+    position:relative;
+} */
+
+.widget-user-image img{
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+
+.card-widget{
+    min-height:150px;
+}

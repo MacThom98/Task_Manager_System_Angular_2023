@@ -1,0 +1,62 @@
+<div class="col-lg-12">
+	<div class="card card-outline card-success">
+		<div class="card-header">
+			<div class="card-tools">
+				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="#" routerLink="/project/add"><i class="fa fa-plus"></i> Add New project</a>
+			</div>
+		</div>
+		<div class="card-body">
+			<table class="table tabe-hover table-condensed" id="list">
+				<colgroup>
+					<col width="5%">
+					<col width="15%">
+					<col width="20%">
+					<col width="15%">
+					<col width="15%">
+					<col width="10%">
+
+					<col width="10%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th class="text-center">#</th>
+						<th class="text-center">Project</th>
+						<th class="text-center">Task</th>
+						<th class="text-center">Project Started</th>
+						<th class="text-center">Project Due Date</th>
+						<th class="text-center">Task Status</th>
+						<th class="text-center">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr *ngFor="let item of tasks">
+						<td class="text-center">{{item.id}}</td>
+						<td>
+							<p><b>{{item.project_id}}</b></p>
+						</td>
+						<td>
+							<p><b>{{item.name}}</b></p>
+							<p class="truncate">{{item.description}}</p>
+						</td>
+						<td><b>{{item.date_created}}</b></td>
+						<td><b>end_date</b></td>
+						
+						<td>
+                
+						  		<span class='badge badge-secondary'>{{item.status}}</span>
+                        
+                        </td>
+						<td class="text-center">
+							<button type="button" class="btn-success btn mx-2"><a class="text-white" href="#" [routerLink]="['task/edit',item.id]"><i class="fas fa-edit"></i></a>
+							</button>
+							<button type="button" class="btn-danger btn " (click)="deleteConfirm(item.id)"><i class="fas fa-trash"></i>
+							</button>
+						</td>
+					</tr>	
+			
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
